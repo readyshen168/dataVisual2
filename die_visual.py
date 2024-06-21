@@ -9,3 +9,10 @@ for roll_num in range(100):
     results.append(result)
 
 print(results)
+
+'''统计每个点数出现的次数'''
+frequences = []
+for value in range(1, die.num_sides + 1):
+    frequences.append(results.count(value))
+
+print(frequences)
