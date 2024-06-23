@@ -1,4 +1,5 @@
 from die import Die
+import plotly.express as px
 
 die = Die()
 
@@ -12,7 +13,19 @@ print(results)
 
 '''统计每个点数出现的次数'''
 frequences = []
-for value in range(1, die.num_sides + 1):
+poss_result = range(1, die.num_sides+1)
+for value in poss_result:
     frequences.append(results.count(value))
 
 print(frequences)
+
+# 画出条形图
+# 定制坐标轴title等
+title = "Results of Rolling One D6 1,000 Times"
+labels = {'x': 'Result', 'y': 'Frequency of Result'}
+fig = px.bar(x=poss_result, y=frequences, title=title, labels=labels)
+fig.show()
+
+
+
+
