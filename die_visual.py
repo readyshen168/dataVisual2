@@ -28,6 +28,8 @@ print(frequences)
 title = "Results of Rolling Two D6 Dices 1,000 Times"
 labels = {'x': 'Result', 'y': 'Frequency of Result'}
 fig = px.bar(x=poss_result, y=frequences, title=title, labels=labels)
+# 让条形图刻度间距为1
+fig.update_layout(xaxis_dtick=1)
 fig.show()
 
 
