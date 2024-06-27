@@ -30,6 +30,8 @@ labels = {'x': 'Result', 'y': 'Frequency of Result'}
 fig = px.bar(x=poss_result, y=frequences, title=title, labels=labels)
 # 让条形图刻度间距为1
 fig.update_layout(xaxis_dtick=1)
+# 保存图形
+fig.write_html('d6.html')
 fig.show()
 
 
